@@ -6,6 +6,8 @@ import com.bridgelabz.crudoperation.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class StudentController {
     @Autowired
@@ -28,5 +30,15 @@ public class StudentController {
     public void updateSubject( @RequestBody StudentEntity subject)
     {
         studentService.addSubject(subject);
+    }
+
+    /**
+     * To demonstarte get method to find all from repository
+     * @return list of all subjects
+     */
+    @RequestMapping("/subjects")
+    public List<StudentEntity> getAllSubjects()
+    {
+        return studentService.getAllSubjects();
     }
 }
