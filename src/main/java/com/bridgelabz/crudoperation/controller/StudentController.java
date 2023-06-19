@@ -41,4 +41,14 @@ public class StudentController {
     {
         return studentService.getAllSubjects();
     }
+
+    /**
+     * demonstrating delete method
+     * @param id
+     */
+    @RequestMapping(method = RequestMethod.DELETE, value="/subjects/{id}")
+    public void DeleteSubject(@PathVariable String id)
+    {
+        studentService.deleteSubject(id);
+    }
 }

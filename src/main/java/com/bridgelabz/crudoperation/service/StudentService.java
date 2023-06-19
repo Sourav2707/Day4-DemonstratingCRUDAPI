@@ -23,4 +23,8 @@ public class StudentService implements IStudentService {
         studentRepository.findAll().forEach(subjects::add);
         return subjects;
     }
+
+    public void deleteSubject(String id) {
+        studentRepository.deleteById(id);
+    }
 }

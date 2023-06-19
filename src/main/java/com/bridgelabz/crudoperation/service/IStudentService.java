@@ -7,4 +7,5 @@ import java.util.List;
 public interface IStudentService {
     void addSubject(StudentEntity subject);
     List<StudentEntity> getAllSubjects();
+    void deleteSubject(String id);
 }
